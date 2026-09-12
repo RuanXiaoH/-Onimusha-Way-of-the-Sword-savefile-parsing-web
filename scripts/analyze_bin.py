@@ -31,7 +31,12 @@ def log(msg: str) -> None:
     print(msg, file=sys.stderr, flush=True)
 
 
-def steam_id() -> str:
+def steam_id(override: str | None = None) -> str:
+    if override is not None:
+        sid = override.strip()
+        if not sid:
+            raise RuntimeError("未提供 SteamID，无法解密存档")
+        return sid
     env = (os.environ.get("ONIMUSHA_STEAM_ID") or "").strip()
     if env:
         return env
@@ -44,11 +49,12 @@ def looks_encrypted(data: bytes) -> bool:
     return data[:4] in (b"DSSS", b"dsss")
 
 
-def decrypt_bin(src: Path, dest: Path) -> Path:
+def decrypt_bin(src: Path, dest: Path, steam: str | None = None) -> Path:
     if not CLI.exists():
         raise RuntimeError(f"找不到解密工具：{CLI}")
     if not PROFILE.exists():
         raise RuntimeError(f"找不到游戏 profile：{PROFILE}")
+    sid = steam_id(steam)
     work = Path(tempfile.mkdtemp(prefix="oni-decrypt-"))
     try:
         inbox = work / "in"
@@ -66,26 +72,21 @@ def decrypt_bin(src: Path, dest: Path) -> Path:
             "-p",
             str(inbox),
             "-u",
-            steam_id(),
+            sid,
             "-q",
         ]
         log("decrypt " + " ".join(cmd[1:5]) + " ...")
         proc = subprocess.run(cmd, cwd=str(CLI.parent), capture_output=True, text=True)
         if proc.returncode != 0:
             detail = (proc.stderr or proc.stdout or "").strip()
-            sid = steam_id()
             if sid:
                 detail = detail.replace(sid, "")
             raise RuntimeError(detail or f"解密失败，退出码 {proc.returncode}")
         after = {p.resolve() for p in out_root.glob("**/*.bin")} if out_root.exists() else set()
         new_files = [p for p in after - before if p.name.lower().endswith(".bin")]
         if not new_files:
-            cands = sorted(out_root.glob("*_decrypted/*.bin"), key=lambda p: p.stat().st_mtime, reverse=True)
-            if not cands:
-                raise RuntimeError("解密完成但没有找到明文存档")
-            newest = cands[0]
-        else:
-            newest = max(new_files, key=lambda p: p.stat().st_mtime)
+            raise RuntimeError("解密失败：没有生成新的明文存档（SteamID 可能不对）")
+        newest = max(new_files, key=lambda p: p.stat().st_mtime)
         dest.write_bytes(newest.read_bytes())
         parent = newest.parent
         if parent.name.endswith("_decrypted"):
@@ -95,7 +96,7 @@ def decrypt_bin(src: Path, dest: Path) -> Path:
         shutil.rmtree(work, ignore_errors=True)
 
 
-def analyze_bytes(raw: bytes) -> dict:
+def analyze_bytes(raw: bytes, steam: str | None = None) -> dict:
     if not DUMP.exists() or not ENUMS.exists():
         raise RuntimeError("缺少解析用的类型表，无法分析存档")
     with tempfile.TemporaryDirectory(prefix="oni-analyze-") as tmp:
@@ -104,7 +105,7 @@ def analyze_bytes(raw: bytes) -> dict:
         src.write_bytes(raw)
         plain = tmp_path / "plain.bin"
         if looks_encrypted(raw):
-            decrypt_bin(src, plain)
+            decrypt_bin(src, plain, steam)
             data = plain.read_bytes()
         else:
             data = raw
@@ -117,7 +118,7 @@ def analyze_bytes(raw: bytes) -> dict:
             if looks_encrypted(raw):
                 raise
             log("明文解析失败，尝试按加密存档解密")
-            decrypt_bin(src, plain)
+            decrypt_bin(src, plain, steam)
             parsed = parse_save(plain.read_bytes(), db)
         if not parsed.get("roots"):
             raise RuntimeError("存档里没有读到数据根")
@@ -130,11 +131,12 @@ def analyze_bytes(raw: bytes) -> dict:
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--bin", required=True)
+    ap.add_argument("--steam-id", default=None)
     args = ap.parse_args()
     path = Path(args.bin)
     if not path.exists():
         raise SystemExit(f"找不到文件 {path}")
-    display = analyze_bytes(path.read_bytes())
+    display = analyze_bytes(path.read_bytes(), args.steam_id)
     display["_source"] = {
         "filename": path.name,
         "analyzedAt": datetime.now().isoformat(timespec="seconds"),

@@ -27,11 +27,16 @@ function readBody(req, limit) {
   });
 }
 
-function runPython(binPath) {
+function runPython(binPath, steamId) {
   return new Promise((resolve, reject) => {
-    const child = spawn(process.env.PYTHON || "python", [SCRIPT, "--bin", binPath], {
+    const args = [SCRIPT, "--bin", binPath];
+    if (steamId) args.push("--steam-id", steamId);
+    const child = spawn(process.env.PYTHON || "python", args, {
       cwd: ROOT,
-      env: { ...process.env, PYTHONIOENCODING: "utf-8" },
+      env: {
+        ...process.env,
+        PYTHONIOENCODING: "utf-8",
+      },
       windowsHide: true,
     });
     let out = "";
@@ -77,14 +82,18 @@ function parseSaveJson(out) {
   return save;
 }
 
-function scrubError(message) {
+function scrubError(message, steamId) {
   let text = String(message || "解析失败");
+  const secrets = [steamId].filter(Boolean);
   try {
     const sidPath = path.join(ROOT, "scripts", "steamid.txt");
     const sid = readFileSync(sidPath, "utf8").trim().split(/\r?\n/)[0]?.trim();
-    if (sid) text = text.split(sid).join("");
+    if (sid) secrets.push(sid);
   } catch {
     // SteamID 只用于脱敏，读不到就原样返回
+  }
+  for (const sid of secrets) {
+    text = text.split(sid).join("");
   }
   return text.replace(/\s+/g, " ").trim() || "解析失败";
 }
@@ -107,10 +116,15 @@ async function handleAnalyze(req, res) {
       return;
     }
     const filename = decodeURIComponent(req.headers["x-filename"] || "data001Slot.bin");
+    const steamId = String(req.headers["x-steam-id"] || "").replace(/\s+/g, "").trim();
+    if (steamId && !/^\d{6,20}$/.test(steamId)) {
+      sendJson(res, 400, { error: "SteamID 应为 6～20 位数字" });
+      return;
+    }
     tmpDir = await mkdtemp(path.join(os.tmpdir(), "oni-upload-"));
     const binPath = path.join(tmpDir, filename.replace(/[^\w.\u4e00-\u9fff-]+/g, "_") || "data001Slot.bin");
     await writeFile(binPath, raw);
-    const out = await runPython(binPath);
+    const out = await runPython(binPath, steamId);
     const save = parseSaveJson(out);
     sendJson(res, 200, {
       save,
@@ -119,7 +133,8 @@ async function handleAnalyze(req, res) {
     });
   } catch (err) {
     const code = err.code === 413 ? 413 : 500;
-    sendJson(res, code, { error: scrubError(err.message) });
+    const steamId = String(req.headers["x-steam-id"] || "").replace(/\s+/g, "").trim();
+    sendJson(res, code, { error: scrubError(err.message, steamId) });
   } finally {
     if (tmpDir) {
       await rm(tmpDir, { recursive: true, force: true }).catch(() => {});

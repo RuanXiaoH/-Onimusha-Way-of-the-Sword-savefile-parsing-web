@@ -57,6 +57,46 @@ body {
   align-items: flex-end;
 }
 
+.hero-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 10px;
+  min-width: min(280px, 100%);
+}
+
+.steam-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.steam-field span {
+  color: var(--gold);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+}
+
+.steam-field input {
+  appearance: none;
+  color: var(--paper);
+  background: rgba(26, 20, 16, 0.78);
+  border: 1px solid var(--gold-dim);
+  padding: 10px 14px;
+  font-family: inherit;
+  font-size: 15px;
+  outline: none;
+}
+
+.steam-field input:focus {
+  border-color: var(--gold);
+}
+
+.hero-actions .steam-field {
+  margin-top: 0;
+}
+
 .file-input {
   display: none;
 }
@@ -149,7 +189,7 @@ body {
   margin: 0 0 10px;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  font-size: 11px;
+  font-size: 16px;
   color: var(--gold);
 }
 

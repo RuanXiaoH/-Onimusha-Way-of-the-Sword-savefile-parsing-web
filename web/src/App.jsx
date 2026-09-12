@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import collectibles from "./data/collectibles.json";
-import { loadLatestSave, saveLatestSave } from "./saveStore";
+import { loadLatestSave, loadSteamId, saveLatestSave, saveSteamId } from "./saveStore";
 
 function sameId(a, b) {
   if (a == null || b == null) return false;
@@ -143,6 +143,29 @@ function formatUploadedAt(value) {
   return date.toLocaleString("zh-CN", { hour12: false });
 }
 
+function normalizeSteamId(value) {
+  return String(value || "").replace(/\s+/g, "").trim();
+}
+
+function SteamIdField({ id, value, onChange, disabled }) {
+  return (
+    <label className="steam-field" htmlFor={id}>
+      <span>SteamID64</span>
+      <input
+        id={id}
+        type="text"
+        inputMode="numeric"
+        autoComplete="off"
+        spellCheck={false}
+        placeholder="Steam个人资料页面链接最后那串数字，一般以7656119开头"
+        value={value}
+        disabled={disabled}
+        onChange={(event) => onChange(normalizeSteamId(event.target.value))}
+      />
+    </label>
+  );
+}
+
 function FilePicker({ id, onFile, disabled, children, className }) {
   const inputRef = useRef(null);
   return (
@@ -172,15 +195,18 @@ function FilePicker({ id, onFile, disabled, children, className }) {
   );
 }
 
-function UploadGate({ onFile, busy, error, dragging, setDragging }) {
+function UploadGate({ onFile, busy, error, dragging, setDragging, steamId, onSteamIdChange }) {
   return (
     <div className="page upload-page">
       <div className="mist" />
       <header className="hero">
+        <p className="kicker">鬼武者 · 剑之道</p>
         <p className="kicker">Onimusha · Way of the Sword</p>
         <h1>存档阅览</h1>
-        <p className="hero-note">仅支持steam存档</p>
+        <p className="hero-note">仅支持Steam存档，解密需要.bin后缀存档和SteamID</p>
+        <p className="hero-note">存档和SteamID只存在于浏览器本地存储，不会被上传到服务器</p>
       </header>
+      <SteamIdField id="steam-id" value={steamId} onChange={onSteamIdChange} disabled={busy} />
       <label
         className={`drop-zone${dragging ? " dragging" : ""}${busy ? " busy" : ""}`}
         onDragEnter={(event) => {
@@ -214,11 +240,11 @@ function UploadGate({ onFile, busy, error, dragging, setDragging }) {
           }}
         />
         <strong>{busy ? "正在解析存档…" : "把存档拖到这里，或点这里选择文件"}</strong>
-        <span>只接受 .bin。解析在本机完成，下次打开仍会显示最后一次提交的结果。</span>
+        <span>只接受.bin后缀存档。解析在本机完成，SteamID与存档只存在于浏览器本地存储，不会被上传到服务器</span>
       </label>
       <p>存档位置一般在：</p>
-      <p>C:\Users\17970\steam\userdata\一串数字 你的steamid\2638890\remote\win64_save</p>
-      <p>存档文件名称一般是 data001Slot.bin</p>
+      <p>C:\Users\你的用户名\steam\userdata\一串数字\2638890\remote\win64_save</p>
+      <p>存档文件一般是 data001Slot.bin</p>
       {error ? <p className="upload-error">{error}</p> : null}
       {busy ? (
         <div className="busy-mask">
@@ -235,8 +261,10 @@ export default function App() {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   const [dragging, setDragging] = useState(false);
+  const [steamId, setSteamId] = useState("");
 
   useEffect(() => {
+    setSteamId(loadSteamId());
     loadLatestSave()
       .then((saved) => {
         if (saved?.save) setRecord(saved);
@@ -245,11 +273,25 @@ export default function App() {
       .finally(() => setReady(true));
   }, []);
 
+  function handleSteamIdChange(value) {
+    setSteamId(value);
+    saveSteamId(value);
+  }
+
   async function submitFile(file) {
     if (!file) return;
     const name = file.name || "data001Slot.bin";
     if (!name.toLowerCase().endsWith(".bin")) {
       setError("请提交 .bin 存档文件");
+      return;
+    }
+    const sid = normalizeSteamId(steamId);
+    if (!sid) {
+      setError("请填写 SteamID");
+      return;
+    }
+    if (!/^\d{6,20}$/.test(sid)) {
+      setError("SteamID 应为 6～20 位数字");
       return;
     }
     setBusy(true);
@@ -261,6 +303,7 @@ export default function App() {
         headers: {
           "Content-Type": "application/octet-stream",
           "X-Filename": encodeURIComponent(name),
+          "X-Steam-Id": sid,
         },
         body,
       });
@@ -303,6 +346,8 @@ export default function App() {
         error={error}
         dragging={dragging}
         setDragging={setDragging}
+        steamId={steamId}
+        onSteamIdChange={handleSteamIdChange}
       />
     );
   }
@@ -315,11 +360,13 @@ export default function App() {
       onFile={submitFile}
       busy={busy}
       error={error}
+      steamId={steamId}
+      onSteamIdChange={handleSteamIdChange}
     />
   );
 }
 
-function SaveViewer({ saveFile, filename, uploadedAt, onFile, busy, error }) {
+function SaveViewer({ saveFile, filename, uploadedAt, onFile, busy, error, steamId, onSteamIdChange }) {
   const slots = saveFile.slots || [saveFile];
   const [selected, setSelected] = useState(0);
   const [collectionTab, setCollectionTab] = useState(null);
@@ -375,6 +422,7 @@ function SaveViewer({ saveFile, filename, uploadedAt, onFile, busy, error }) {
     <div className="page">
       <div className="mist" />
       <header className="hero">
+        <p className="kicker">鬼武者 · 剑之道</p>
         <p className="kicker">Onimusha · Way of the Sword</p>
         <div className="hero-row">
           <div>
@@ -388,9 +436,17 @@ function SaveViewer({ saveFile, filename, uploadedAt, onFile, busy, error }) {
               {uploadedAt ? ` · ${formatUploadedAt(uploadedAt)} 提交` : ""}
             </p>
           </div>
-          <FilePicker className="replace-btn" onFile={onFile} disabled={busy}>
-            {busy ? "正在解析…" : "更换存档"}
-          </FilePicker>
+          <div className="hero-actions">
+            <SteamIdField
+              id="steam-id-viewer"
+              value={steamId}
+              onChange={onSteamIdChange}
+              disabled={busy}
+            />
+            <FilePicker className="replace-btn" onFile={onFile} disabled={busy}>
+              {busy ? "正在解析…" : "更换存档"}
+            </FilePicker>
+          </div>
         </div>
         {error ? <p className="upload-error">{error}</p> : null}
       </header>
