@@ -416,6 +416,16 @@ h1 {
   background: rgba(26, 20, 16, 0.55);
 }
 
+a.weapon-card {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a.weapon-card:hover {
+  border-color: var(--gold-dim);
+}
+
 .collect-btn span,
 .weapon-card span {
   display: block;

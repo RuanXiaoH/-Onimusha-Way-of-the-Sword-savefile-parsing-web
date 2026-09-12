@@ -147,6 +147,18 @@ function normalizeSteamId(value) {
   return String(value || "").replace(/\s+/g, "").trim();
 }
 
+function CollectCard({ owned, maxed, href, children }) {
+  const className = `weapon-card${owned ? " owned" : ""}${maxed ? " maxed" : ""}`;
+  if (href) {
+    return (
+      <a className={className} href={href} target="_blank" rel="noreferrer">
+        {children}
+      </a>
+    );
+  }
+  return <div className={className}>{children}</div>;
+}
+
 function BrandMark() {
   return <img className="brand-name" src="/image/name.webp" alt="鬼武者：剑之道" />;
 }
@@ -556,10 +568,10 @@ function SaveViewer({ saveFile, filename, uploadedAt, onFile, busy, error, steam
               {weaponCatalog.map((weapon) => {
                 const owned = unlockedWeapons.some((id) => sameId(id, weapon.id));
                 return (
-                  <div className={`weapon-card${owned ? " owned" : ""}`} key={weapon.id}>
+                  <CollectCard owned={owned} href={weapon.href} key={weapon.id}>
                     <span>{owned ? "已收集" : "未收集"}</span>
                     <strong>{weapon.name}</strong>
-                  </div>
+                  </CollectCard>
                 );
               })}
             </div>
@@ -725,7 +737,7 @@ function SaveViewer({ saveFile, filename, uploadedAt, onFile, busy, error, steam
       </section>
 
       <footer>
-        解析只在本机进行，最后一次提交的结果会记在这个浏览器里，不会传到网上
+        解析只在本机进行，存档和SteamID会记在本地，不会传到网上
       </footer>
       </div>
       {busy ? (
