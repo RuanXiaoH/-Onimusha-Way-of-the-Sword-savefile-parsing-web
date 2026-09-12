@@ -1,0 +1,23 @@
+EmBookDataText_EmName_19292	一目笠	一ツ目笠（ひとつめがさ）	Hitotsume Gasa (Cyclops Soldier)
+EmBookDataText_EmName_24988	首灯	首灯（くびあかり）	Kubi Akari (Flare Head)
+EmBookDataText_EmName_13820	棘丸	棘丸（とげまる）	Togemaru (Razor Back)
+EmBookDataText_EmName_15548	蛊饲	蠱飼（こがい）	Kogai (Dread Host)
+EmBookDataText_EmName_29399	蛊头	蠱頭（こがしら）	Kogashira (Dread Master)
+EmBookDataText_EmName_2966	胧乌	朧烏（おぼろがらす）	Oboro Garasu (Raven Wraith)
+EmBookDataText_EmName_777	亡邪	亡邪（もうじゃ）	Mohja (Restless Dead)
+EmBookDataText_EmName_5586	血儿固	血児固（ちじこ）	Chijiko (Gore Spawn)
+EmBookDataText_EmName_22208	鳍姬	ひれ姫（ひれひめ）	Hirehime (Fin Fatale)
+EmBookDataText_EmName_27783	一目将	一ツ目将（ひとつめしょう）	Hitotsume Sho (Cyclops Commander)
+EmBookDataText_EmName_3946	百秽	百穢（びゃくえ）	Byakue (Hundred Defilements)
+EmBookDataText_EmName_5597	怒伐天	怒伐天（どはつてん）	Dohatsu-ten (Heaven's Bane)
+EmBookDataText_EmName_21297	鵺兽	鵺（ぬえ）	Nue (Legendary Chimera)
+EmBookDataText_EmName_19741	大唾拉	大唾拉（だいだら）	Daidara (Slavering Glutton)
+EmBookDataText_EmName_29586	大鵺	大鵺（おおぬえ）	Greater Nue
+EmBookDataText_EmName_32620	罗掌愿	羅掌願（らしょうがん）	Rasho-gan (Wish Warper)
+EmBookDataText_EmName_31431	佐佐木岩流	佐々木巌流（ささきがんりゅう）	Sasaki Ganryu
+EmBookDataText_EmName_16834	弁庆	弁慶（べんけい）	Benkei
+EmBookDataText_EmName_28649	酒吞童子	酒呑童子（しゅてんどうじ）	Shuten Doji (Gourd Drainer)
+EmBookDataText_EmName_8553	道狂	道狂（どうきょう）	Dokyo (The Transgressor)
+EmBookDataText_EmName_15401	畏风	畏風（いふう）	Ifuu (Fearsome Gale)
+EmBookDataText_EmName_24526	抚雷	撫雷（ぶらい）	Burai (Lightning Keeper)
+EmBookDataText_EmName_1590	源义经	源義経（みなもとのよしつね）	Minamoto no Yoshitsune

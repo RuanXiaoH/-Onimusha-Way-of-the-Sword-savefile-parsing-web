@@ -1,0 +1,53 @@
+# secrets
+scripts/steamid.txt
+scripts/local_secrets.json
+.env
+.env.*
+
+# frontend
+web/node_modules/
+web/dist/
+web/public/_verify*
+web/src/data/save.json
+
+# personal / generated saves
+test_data/
+*.decrypted.bin
+*.parsed.json
+*.summary.json
+
+# script scratch
+scripts/_display_preview.json
+scripts/_analyze_out.json
+scripts/_analyze_err.txt
+scripts/_scan_death_wide.out.txt
+scripts/_mystery_dump.json
+scripts/_submystery_headlines.json
+
+# bulky dumps not required to run the viewer
+dumps/main_toc.json
+dumps/patch_toc.json
+dumps/pak_sample/
+dumps/REasy/
+
+# python
+scripts/__pycache__/
+__pycache__/
+*.pyc
+
+# decrypt tool leftovers and unrelated profiles
+tools/decrypt_in/
+tools/decrypt_in_*/
+tools/decrypt_out/
+tools/mandarin_cli/**/log_*.log
+tools/mandarin_cli/**/_OUTPUT/
+tools/profiles_extract/_profiles/*
+!tools/profiles_extract/_profiles/Onimusha Way of the Sword v1.bin
+tools/*.zip
+tools/ree-pak-cli.exe
+tools/oniwots_guess.list
+tools/oniwots_msg.list
+
+# OS
+.DS_Store
+Thumbs.db

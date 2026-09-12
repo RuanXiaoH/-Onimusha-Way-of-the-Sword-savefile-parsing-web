@@ -1,0 +1,595 @@
+{
+  "source": "natives/stm/GameDesign/Action/Player/Data/Common/PlayerGrowthParameter.user.3",
+  "note": "每档列表按购买顺序排列。第 2–4 档开头 1 个是升大等级，第 4 档末尾 1 个是升到大等级 5。小强化满了还要再升一次才进下一档，小等级归零。大等级 1 小强化 9/9/5，其后 10/10/5。大等级 5 没有小强化。",
+  "maxLevel": 5,
+  "smallLevels": 4,
+  "categories": [
+    "sword",
+    "armor",
+    "gauntlet"
+  ],
+  "stages": {
+    "0c405fae-533b-404c-80b8-3c9bb43f4693": {
+      "category": "sword",
+      "smallLevel": 0
+    },
+    "51ace073-70c0-415f-8672-907f6866c4e9": {
+      "category": "sword",
+      "smallLevel": 0
+    },
+    "3e3f9891-8fa0-4090-be07-3af1442cd20c": {
+      "category": "sword",
+      "smallLevel": 0
+    },
+    "2747b6ff-d53c-4641-a129-4747eca337ce": {
+      "category": "sword",
+      "smallLevel": 0
+    },
+    "109bac50-bf48-41d6-b826-4fb809cba678": {
+      "category": "sword",
+      "smallLevel": 0
+    },
+    "eb4d2e65-71f1-4770-9a68-44c3fe311639": {
+      "category": "sword",
+      "smallLevel": 0
+    },
+    "7bb6a82c-afec-42e4-a7bb-81eebd89f2ba": {
+      "category": "sword",
+      "smallLevel": 0
+    },
+    "e939e8a9-51fc-40e5-a7ec-2f196574af30": {
+      "category": "sword",
+      "smallLevel": 0
+    },
+    "52ed8326-4bda-4fc9-b04c-381558701bed": {
+      "category": "sword",
+      "smallLevel": 0
+    },
+    "1b0e4b23-1572-4299-917c-04827c9c5c2c": {
+      "category": "sword",
+      "smallLevel": 1
+    },
+    "ce019ab3-8d06-4165-9765-008c2cb857a3": {
+      "category": "sword",
+      "smallLevel": 1
+    },
+    "7ca66a76-edc4-483a-94a6-84d36d4bb229": {
+      "category": "sword",
+      "smallLevel": 1
+    },
+    "fb24acf1-5db4-46ef-b425-0618ec3e1c22": {
+      "category": "sword",
+      "smallLevel": 1
+    },
+    "67bf4c53-ec6b-4a89-ac82-9a75310c54cc": {
+      "category": "sword",
+      "smallLevel": 1
+    },
+    "59329b8c-33b6-44de-89b3-40cb50a9665d": {
+      "category": "sword",
+      "smallLevel": 1
+    },
+    "1e4e529e-84c7-435b-bbe9-cc5d6366d941": {
+      "category": "sword",
+      "smallLevel": 1
+    },
+    "32762c30-89c2-4f0f-adb1-234057edeac2": {
+      "category": "sword",
+      "smallLevel": 1
+    },
+    "8171149c-0379-4df0-b914-9c5de2f65e62": {
+      "category": "sword",
+      "smallLevel": 1
+    },
+    "c7011b18-64fc-4d66-96f6-8573b02f2a4c": {
+      "category": "sword",
+      "smallLevel": 1
+    },
+    "fe5a3138-e7d9-4db0-bceb-8685c56dbe2f": {
+      "category": "sword",
+      "smallLevel": 1
+    },
+    "e4ce92c4-f738-4690-a311-7314ce644b7e": {
+      "category": "sword",
+      "smallLevel": 2
+    },
+    "90b2a92e-c3df-4d16-b787-a33e57179e2d": {
+      "category": "sword",
+      "smallLevel": 2
+    },
+    "94316621-50b8-4abc-8245-d11b68cacd9d": {
+      "category": "sword",
+      "smallLevel": 2
+    },
+    "4b8677c4-0ded-41a0-b32d-83e39ea0a3c1": {
+      "category": "sword",
+      "smallLevel": 2
+    },
+    "09e646f0-4774-4a6a-bc21-7dfa1647214c": {
+      "category": "sword",
+      "smallLevel": 2
+    },
+    "f21de4e8-b55d-4dfb-a619-8b696fda620a": {
+      "category": "sword",
+      "smallLevel": 2
+    },
+    "6ef4c6e4-e1f2-402a-aca0-3143c14f2957": {
+      "category": "sword",
+      "smallLevel": 2
+    },
+    "995ca54f-fe68-4969-ba63-ae7f0e8a678e": {
+      "category": "sword",
+      "smallLevel": 2
+    },
+    "756d2877-ea70-417d-83c2-d1a0cac5b054": {
+      "category": "sword",
+      "smallLevel": 2
+    },
+    "a9e2da47-6c31-09d7-3cce-127b732bd8be": {
+      "category": "sword",
+      "smallLevel": 2
+    },
+    "fc506484-f218-0ca8-1fe0-c22d3ddd395e": {
+      "category": "sword",
+      "smallLevel": 2
+    },
+    "2f1f2aba-586b-0e7d-318a-1a839b5d03e3": {
+      "category": "sword",
+      "smallLevel": 3
+    },
+    "6b8835e3-c780-03b4-376d-539e1f72a5bf": {
+      "category": "sword",
+      "smallLevel": 3
+    },
+    "4db38709-1724-03ca-03e5-7a1766546fa1": {
+      "category": "sword",
+      "smallLevel": 3
+    },
+    "4f5b114f-59a4-04bc-13d0-83df1a89cb6b": {
+      "category": "sword",
+      "smallLevel": 3
+    },
+    "115633e5-8dd5-0e7f-395c-91c67ed4947c": {
+      "category": "sword",
+      "smallLevel": 3
+    },
+    "e18f1919-794f-01c7-39e4-cd2bf3dc4b03": {
+      "category": "sword",
+      "smallLevel": 3
+    },
+    "0893a681-7e90-0b8f-129d-15606ce62303": {
+      "category": "sword",
+      "smallLevel": 3
+    },
+    "e52a5f4c-6218-0149-3813-50389c39f904": {
+      "category": "sword",
+      "smallLevel": 3
+    },
+    "05ad09bd-6167-08ba-2e94-18cf02fe52c8": {
+      "category": "sword",
+      "smallLevel": 3
+    },
+    "f578b951-d629-0c20-2cfd-e930af125ca8": {
+      "category": "sword",
+      "smallLevel": 3
+    },
+    "2bf61bdd-5848-0ab3-2a63-6f2cc8c9b461": {
+      "category": "sword",
+      "smallLevel": 3
+    },
+    "8b5d4aad-df8a-0bf4-0dea-1326993f8d51": {
+      "category": "sword",
+      "smallLevel": 3
+    },
+    "693f90e9-4e4b-42c0-8b0c-a118e64bd850": {
+      "category": "armor",
+      "smallLevel": 0
+    },
+    "435b06a1-c5c3-4064-96fa-50e016e9b773": {
+      "category": "armor",
+      "smallLevel": 0
+    },
+    "f53c51ff-934f-4a17-8e5b-8afc8960e22c": {
+      "category": "armor",
+      "smallLevel": 0
+    },
+    "b12bed27-5062-41d1-9e30-0b24e55d18ed": {
+      "category": "armor",
+      "smallLevel": 0
+    },
+    "f63ee739-7f9a-4eca-a328-b3cd02fdfb2d": {
+      "category": "armor",
+      "smallLevel": 0
+    },
+    "a3e295e0-000b-4087-8543-c8fb833ddf8d": {
+      "category": "armor",
+      "smallLevel": 0
+    },
+    "d3e20fec-28db-4b46-8329-c4a41b26b429": {
+      "category": "armor",
+      "smallLevel": 0
+    },
+    "bd6e65bc-d3da-47c3-a7f9-8cd8eddfd932": {
+      "category": "armor",
+      "smallLevel": 0
+    },
+    "529a5d0f-2bc4-4734-959c-c31ff42edcd1": {
+      "category": "armor",
+      "smallLevel": 0
+    },
+    "0fd124a1-d85d-40a2-b3f0-6372a02e2b57": {
+      "category": "armor",
+      "smallLevel": 1
+    },
+    "bf8cabb7-4e09-4ab9-9bc1-5b340ce962d4": {
+      "category": "armor",
+      "smallLevel": 1
+    },
+    "81af3b44-bde2-4d79-8b33-cc316e773ff0": {
+      "category": "armor",
+      "smallLevel": 1
+    },
+    "91b0eab1-d724-4f6d-85b4-980fa2cf7fda": {
+      "category": "armor",
+      "smallLevel": 1
+    },
+    "c43dec3d-1d5d-41d8-872f-74e0c514d8fd": {
+      "category": "armor",
+      "smallLevel": 1
+    },
+    "691572b0-2dcc-4d81-b929-9e81b50ea82e": {
+      "category": "armor",
+      "smallLevel": 1
+    },
+    "85972a22-66a1-4ba4-abdf-da64669e7a65": {
+      "category": "armor",
+      "smallLevel": 1
+    },
+    "f55cfc6e-4c8b-41c7-94bd-05de047ed335": {
+      "category": "armor",
+      "smallLevel": 1
+    },
+    "fa6e2f69-29a8-4c66-a885-c756534eecbd": {
+      "category": "armor",
+      "smallLevel": 1
+    },
+    "51a0bb35-5206-4699-aa9f-d5ddd453e07e": {
+      "category": "armor",
+      "smallLevel": 1
+    },
+    "22aec06e-06d3-45f3-a9ab-d10ce0024590": {
+      "category": "armor",
+      "smallLevel": 1
+    },
+    "32e1d4ea-ab45-4c22-83bd-2e0ba7448558": {
+      "category": "armor",
+      "smallLevel": 2
+    },
+    "94001ee4-6bd7-4273-85df-4fd7dc2f4fae": {
+      "category": "armor",
+      "smallLevel": 2
+    },
+    "fe706dc4-0f08-4487-918e-838ddab25aba": {
+      "category": "armor",
+      "smallLevel": 2
+    },
+    "cce3bb3e-da18-415d-a8bd-7a6b10b7a814": {
+      "category": "armor",
+      "smallLevel": 2
+    },
+    "8c62270f-b3c8-457f-b07d-de03dbf2355b": {
+      "category": "armor",
+      "smallLevel": 2
+    },
+    "521e0618-0a2f-4afa-9941-bbad0359479d": {
+      "category": "armor",
+      "smallLevel": 2
+    },
+    "00e8fbe2-56d5-4717-8d1d-d32dd4d42475": {
+      "category": "armor",
+      "smallLevel": 2
+    },
+    "fbad934e-5669-498c-914f-b4a767b9c925": {
+      "category": "armor",
+      "smallLevel": 2
+    },
+    "7fdb1ad8-cf61-461b-babb-4181fb0fa6c4": {
+      "category": "armor",
+      "smallLevel": 2
+    },
+    "ee89e094-8135-0939-1895-07130fe4550e": {
+      "category": "armor",
+      "smallLevel": 2
+    },
+    "fe7dcbc5-07bd-0086-1997-90171ae8d2ca": {
+      "category": "armor",
+      "smallLevel": 2
+    },
+    "9a2021c3-ee33-05b5-0bea-c03153cddf29": {
+      "category": "armor",
+      "smallLevel": 3
+    },
+    "282e4d7d-6c83-0e0f-03c5-d24dd6c2d889": {
+      "category": "armor",
+      "smallLevel": 3
+    },
+    "3a4ec711-ed6d-0c8a-0458-3e92f802f142": {
+      "category": "armor",
+      "smallLevel": 3
+    },
+    "c97288c8-0dac-0c2b-1b86-9cf2784e0d06": {
+      "category": "armor",
+      "smallLevel": 3
+    },
+    "84c13a84-8297-00c1-1a2a-d592171f2d17": {
+      "category": "armor",
+      "smallLevel": 3
+    },
+    "cc9de508-670e-0663-0cb5-d122ec7dddc4": {
+      "category": "armor",
+      "smallLevel": 3
+    },
+    "48291dbb-9e40-0dd6-33d9-fd4c10940b1c": {
+      "category": "armor",
+      "smallLevel": 3
+    },
+    "5cf8ae4a-6937-04bd-1d0a-75518e2bf064": {
+      "category": "armor",
+      "smallLevel": 3
+    },
+    "04a6c5b8-7baa-094a-05b0-2c56c3b58e6f": {
+      "category": "armor",
+      "smallLevel": 3
+    },
+    "7f52880a-cc14-09a3-3267-8f189400ee13": {
+      "category": "armor",
+      "smallLevel": 3
+    },
+    "500293b3-6812-082c-24d7-86835890046a": {
+      "category": "armor",
+      "smallLevel": 3
+    },
+    "e07e847d-3c6a-0f3e-1960-57428f779d6d": {
+      "category": "armor",
+      "smallLevel": 3
+    },
+    "513c435a-98d1-47b5-876f-8aa67ce44d46": {
+      "category": "gauntlet",
+      "smallLevel": 0
+    },
+    "b1ab3c4c-6acd-43f4-9802-6e57a11c4c2e": {
+      "category": "gauntlet",
+      "smallLevel": 0
+    },
+    "12f764cc-41c5-4e3a-98ac-eefb6a72f6c9": {
+      "category": "gauntlet",
+      "smallLevel": 0
+    },
+    "83c0c364-b689-4d7d-8f7e-238e571f7313": {
+      "category": "gauntlet",
+      "smallLevel": 0
+    },
+    "5473352d-1564-4d66-9766-8b9aabce3268": {
+      "category": "gauntlet",
+      "smallLevel": 0
+    },
+    "087b89e1-9ff4-45e8-859f-d222bbf4c0f9": {
+      "category": "gauntlet",
+      "smallLevel": 1
+    },
+    "fde37d66-f838-440a-bd3c-87b618f9505f": {
+      "category": "gauntlet",
+      "smallLevel": 1
+    },
+    "e53928c6-ad22-4a05-8451-37da981bdc9c": {
+      "category": "gauntlet",
+      "smallLevel": 1
+    },
+    "9d65a942-f806-41b3-9b1a-8d202b59ad32": {
+      "category": "gauntlet",
+      "smallLevel": 1
+    },
+    "fa7c19df-5e55-406c-9d7d-8e43602c089e": {
+      "category": "gauntlet",
+      "smallLevel": 1
+    },
+    "fe0d8e7c-91cf-4849-a97d-cd7ae3ee530d": {
+      "category": "gauntlet",
+      "smallLevel": 1
+    },
+    "fac8552b-4d13-4932-9e31-f489b702a4bf": {
+      "category": "gauntlet",
+      "smallLevel": 2
+    },
+    "b9d4037f-5656-006b-10ea-d8d0f5f3f448": {
+      "category": "gauntlet",
+      "smallLevel": 2
+    },
+    "f5fe62d5-8e7b-06d3-09b8-86a7726278b0": {
+      "category": "gauntlet",
+      "smallLevel": 2
+    },
+    "ad77f60d-d076-003b-3d6b-1b85a239a851": {
+      "category": "gauntlet",
+      "smallLevel": 2
+    },
+    "3497a7f4-0b16-0a42-25fe-dd7ddd06b5cb": {
+      "category": "gauntlet",
+      "smallLevel": 2
+    },
+    "3cefbb88-efce-0d7d-2277-f4729b5301a7": {
+      "category": "gauntlet",
+      "smallLevel": 2
+    },
+    "1e963018-e1cf-0c81-0160-1fa2adffb2c0": {
+      "category": "gauntlet",
+      "smallLevel": 3
+    },
+    "7603b3f5-ab9d-0033-1b49-becf1bf82dc3": {
+      "category": "gauntlet",
+      "smallLevel": 3
+    },
+    "cc62a184-4b58-0b90-1e2e-380b0a80b06b": {
+      "category": "gauntlet",
+      "smallLevel": 3
+    },
+    "5e952662-e0c7-0e89-1904-385a129dc7e0": {
+      "category": "gauntlet",
+      "smallLevel": 3
+    },
+    "71f5548e-6d17-024b-14dc-bb316fc3486a": {
+      "category": "gauntlet",
+      "smallLevel": 3
+    },
+    "b9fdcbd1-8009-084c-245e-9fb5feeb31ac": {
+      "category": "gauntlet",
+      "smallLevel": 3
+    },
+    "3eb657bc-942d-0e38-104d-a4a0179978c4": {
+      "category": "gauntlet",
+      "smallLevel": 3
+    }
+  },
+  "catalog": {
+    "sword": {
+      "0": [
+        "0c405fae-533b-404c-80b8-3c9bb43f4693",
+        "51ace073-70c0-415f-8672-907f6866c4e9",
+        "3e3f9891-8fa0-4090-be07-3af1442cd20c",
+        "2747b6ff-d53c-4641-a129-4747eca337ce",
+        "109bac50-bf48-41d6-b826-4fb809cba678",
+        "eb4d2e65-71f1-4770-9a68-44c3fe311639",
+        "7bb6a82c-afec-42e4-a7bb-81eebd89f2ba",
+        "e939e8a9-51fc-40e5-a7ec-2f196574af30",
+        "52ed8326-4bda-4fc9-b04c-381558701bed"
+      ],
+      "1": [
+        "1b0e4b23-1572-4299-917c-04827c9c5c2c",
+        "ce019ab3-8d06-4165-9765-008c2cb857a3",
+        "7ca66a76-edc4-483a-94a6-84d36d4bb229",
+        "fb24acf1-5db4-46ef-b425-0618ec3e1c22",
+        "67bf4c53-ec6b-4a89-ac82-9a75310c54cc",
+        "59329b8c-33b6-44de-89b3-40cb50a9665d",
+        "1e4e529e-84c7-435b-bbe9-cc5d6366d941",
+        "32762c30-89c2-4f0f-adb1-234057edeac2",
+        "8171149c-0379-4df0-b914-9c5de2f65e62",
+        "c7011b18-64fc-4d66-96f6-8573b02f2a4c",
+        "fe5a3138-e7d9-4db0-bceb-8685c56dbe2f"
+      ],
+      "2": [
+        "e4ce92c4-f738-4690-a311-7314ce644b7e",
+        "90b2a92e-c3df-4d16-b787-a33e57179e2d",
+        "94316621-50b8-4abc-8245-d11b68cacd9d",
+        "4b8677c4-0ded-41a0-b32d-83e39ea0a3c1",
+        "09e646f0-4774-4a6a-bc21-7dfa1647214c",
+        "f21de4e8-b55d-4dfb-a619-8b696fda620a",
+        "6ef4c6e4-e1f2-402a-aca0-3143c14f2957",
+        "995ca54f-fe68-4969-ba63-ae7f0e8a678e",
+        "756d2877-ea70-417d-83c2-d1a0cac5b054",
+        "a9e2da47-6c31-09d7-3cce-127b732bd8be",
+        "fc506484-f218-0ca8-1fe0-c22d3ddd395e"
+      ],
+      "3": [
+        "2f1f2aba-586b-0e7d-318a-1a839b5d03e3",
+        "6b8835e3-c780-03b4-376d-539e1f72a5bf",
+        "4db38709-1724-03ca-03e5-7a1766546fa1",
+        "4f5b114f-59a4-04bc-13d0-83df1a89cb6b",
+        "115633e5-8dd5-0e7f-395c-91c67ed4947c",
+        "e18f1919-794f-01c7-39e4-cd2bf3dc4b03",
+        "0893a681-7e90-0b8f-129d-15606ce62303",
+        "e52a5f4c-6218-0149-3813-50389c39f904",
+        "05ad09bd-6167-08ba-2e94-18cf02fe52c8",
+        "f578b951-d629-0c20-2cfd-e930af125ca8",
+        "2bf61bdd-5848-0ab3-2a63-6f2cc8c9b461",
+        "8b5d4aad-df8a-0bf4-0dea-1326993f8d51"
+      ]
+    },
+    "armor": {
+      "0": [
+        "693f90e9-4e4b-42c0-8b0c-a118e64bd850",
+        "435b06a1-c5c3-4064-96fa-50e016e9b773",
+        "f53c51ff-934f-4a17-8e5b-8afc8960e22c",
+        "b12bed27-5062-41d1-9e30-0b24e55d18ed",
+        "f63ee739-7f9a-4eca-a328-b3cd02fdfb2d",
+        "a3e295e0-000b-4087-8543-c8fb833ddf8d",
+        "d3e20fec-28db-4b46-8329-c4a41b26b429",
+        "bd6e65bc-d3da-47c3-a7f9-8cd8eddfd932",
+        "529a5d0f-2bc4-4734-959c-c31ff42edcd1"
+      ],
+      "1": [
+        "0fd124a1-d85d-40a2-b3f0-6372a02e2b57",
+        "bf8cabb7-4e09-4ab9-9bc1-5b340ce962d4",
+        "81af3b44-bde2-4d79-8b33-cc316e773ff0",
+        "91b0eab1-d724-4f6d-85b4-980fa2cf7fda",
+        "c43dec3d-1d5d-41d8-872f-74e0c514d8fd",
+        "691572b0-2dcc-4d81-b929-9e81b50ea82e",
+        "85972a22-66a1-4ba4-abdf-da64669e7a65",
+        "f55cfc6e-4c8b-41c7-94bd-05de047ed335",
+        "fa6e2f69-29a8-4c66-a885-c756534eecbd",
+        "51a0bb35-5206-4699-aa9f-d5ddd453e07e",
+        "22aec06e-06d3-45f3-a9ab-d10ce0024590"
+      ],
+      "2": [
+        "32e1d4ea-ab45-4c22-83bd-2e0ba7448558",
+        "94001ee4-6bd7-4273-85df-4fd7dc2f4fae",
+        "fe706dc4-0f08-4487-918e-838ddab25aba",
+        "cce3bb3e-da18-415d-a8bd-7a6b10b7a814",
+        "8c62270f-b3c8-457f-b07d-de03dbf2355b",
+        "521e0618-0a2f-4afa-9941-bbad0359479d",
+        "00e8fbe2-56d5-4717-8d1d-d32dd4d42475",
+        "fbad934e-5669-498c-914f-b4a767b9c925",
+        "7fdb1ad8-cf61-461b-babb-4181fb0fa6c4",
+        "ee89e094-8135-0939-1895-07130fe4550e",
+        "fe7dcbc5-07bd-0086-1997-90171ae8d2ca"
+      ],
+      "3": [
+        "9a2021c3-ee33-05b5-0bea-c03153cddf29",
+        "282e4d7d-6c83-0e0f-03c5-d24dd6c2d889",
+        "3a4ec711-ed6d-0c8a-0458-3e92f802f142",
+        "c97288c8-0dac-0c2b-1b86-9cf2784e0d06",
+        "84c13a84-8297-00c1-1a2a-d592171f2d17",
+        "cc9de508-670e-0663-0cb5-d122ec7dddc4",
+        "48291dbb-9e40-0dd6-33d9-fd4c10940b1c",
+        "5cf8ae4a-6937-04bd-1d0a-75518e2bf064",
+        "04a6c5b8-7baa-094a-05b0-2c56c3b58e6f",
+        "7f52880a-cc14-09a3-3267-8f189400ee13",
+        "500293b3-6812-082c-24d7-86835890046a",
+        "e07e847d-3c6a-0f3e-1960-57428f779d6d"
+      ]
+    },
+    "gauntlet": {
+      "0": [
+        "513c435a-98d1-47b5-876f-8aa67ce44d46",
+        "b1ab3c4c-6acd-43f4-9802-6e57a11c4c2e",
+        "12f764cc-41c5-4e3a-98ac-eefb6a72f6c9",
+        "83c0c364-b689-4d7d-8f7e-238e571f7313",
+        "5473352d-1564-4d66-9766-8b9aabce3268"
+      ],
+      "1": [
+        "087b89e1-9ff4-45e8-859f-d222bbf4c0f9",
+        "fde37d66-f838-440a-bd3c-87b618f9505f",
+        "e53928c6-ad22-4a05-8451-37da981bdc9c",
+        "9d65a942-f806-41b3-9b1a-8d202b59ad32",
+        "fa7c19df-5e55-406c-9d7d-8e43602c089e",
+        "fe0d8e7c-91cf-4849-a97d-cd7ae3ee530d"
+      ],
+      "2": [
+        "fac8552b-4d13-4932-9e31-f489b702a4bf",
+        "b9d4037f-5656-006b-10ea-d8d0f5f3f448",
+        "f5fe62d5-8e7b-06d3-09b8-86a7726278b0",
+        "ad77f60d-d076-003b-3d6b-1b85a239a851",
+        "3497a7f4-0b16-0a42-25fe-dd7ddd06b5cb",
+        "3cefbb88-efce-0d7d-2277-f4729b5301a7"
+      ],
+      "3": [
+        "1e963018-e1cf-0c81-0160-1fa2adffb2c0",
+        "7603b3f5-ab9d-0033-1b49-becf1bf82dc3",
+        "cc62a184-4b58-0b90-1e2e-380b0a80b06b",
+        "5e952662-e0c7-0e89-1904-385a129dc7e0",
+        "71f5548e-6d17-024b-14dc-bb316fc3486a",
+        "b9fdcbd1-8009-084c-245e-9fb5feeb31ac",
+        "3eb657bc-942d-0e38-104d-a4a0179978c4"
+      ]
+    }
+  }
+}

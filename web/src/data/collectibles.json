@@ -1,0 +1,85 @@
+{
+  "totals": {
+    "oniWeapons": 6,
+    "lanterns": 5,
+    "lanternMaxLevel": 3,
+    "amulets": 15,
+    "komainu": 36,
+    "mysteries": 23
+  },
+  "oniWeapons": [
+    { "id": -1122577408, "name": "双刀【二天】" },
+    { "id": 1100475904, "name": "两刃【风卷】" },
+    { "id": -1061520576, "name": "大锤【地鸣】" },
+    { "id": -1617688704, "name": "魔笛【火鸟】" },
+    { "id": 559907904, "name": "锐枪【闪空】" },
+    { "id": -2048213632, "name": "太刀【止水】" }
+  ],
+  "lanterns": [
+    { "index": 1, "name": "鬼灯袋【特制】", "ids": [[700669120, -749388992], [-801449600], [-1101782912]] },
+    { "index": 2, "name": "鬼灯袋【再生】", "ids": [-1014532928, 1032730752, 808782848] },
+    { "index": 3, "name": "鬼灯袋【攻势】", "ids": [32464588, 648391360, -765729792] },
+    { "index": 4, "name": "鬼灯袋【攻守】", "ids": [-228832000, -1844962432, -1110076672] },
+    { "index": 5, "name": "鬼灯袋【觉醒】", "ids": [-1992338176, 1070175040, 1914396800] }
+  ],
+  "amulets": [
+    { "obtainUid": 1, "seriesId": 21703, "name": "可爱御守【狛犬】（预购）" },
+    { "obtainUid": 2, "seriesId": -986953408, "name": "治愈御守" },
+    { "obtainUid": 3, "seriesId": -82133712, "name": "增强御守【气焰】" },
+    { "obtainUid": 4, "seriesId": 22226, "name": "神力御守【追击】" },
+    { "obtainUid": 5, "seriesId": 8878, "name": "净化御守" },
+    { "obtainUid": 6, "seriesId": -101436872, "name": "集魂御守" },
+    { "obtainUid": 7, "seriesId": -2055518080, "name": "力动御守" },
+    { "obtainUid": 8, "seriesId": 367406080, "name": "神力御守【心眼】" },
+    { "obtainUid": 9, "seriesId": 2021962368, "name": "增强御守【连斩】" },
+    { "obtainUid": 10, "seriesId": 13748, "name": "引诱御守" },
+    { "obtainUid": 11, "seriesId": 11331, "name": "神力御守【剑术】" },
+    { "obtainUid": 12, "seriesId": -1086777216, "name": "气焰御守" },
+    { "obtainUid": 13, "seriesId": 691663040, "name": "神力御守【鬼技】" },
+    { "obtainUid": 14, "seriesId": 618666944, "name": "守护御守" },
+    { "obtainUid": 15, "seriesId": 1280708096, "name": "增强御守【觉醒】" },
+    { "obtainUid": 16, "seriesId": -1786341248, "name": "增强御守【鬼技】" }
+  ],
+  "mysteries": [
+    { "index": 0, "bookId": 19292, "itemId": 22384, "name": "一目笠" },
+    { "index": 1, "bookId": 24988, "itemId": 23589, "name": "首灯" },
+    { "index": 2, "bookId": 13820, "itemId": 27860, "name": "棘丸" },
+    { "index": 3, "bookId": 15548, "itemId": 20845, "name": "蛊饲" },
+    { "index": 4, "bookId": 29399, "itemId": 1199, "name": "蛊头" },
+    { "index": 5, "bookId": 2966, "itemId": 9109, "name": "胧乌" },
+    { "index": 6, "bookId": 777, "itemId": 8085, "name": "亡邪" },
+    { "index": 7, "bookId": 5586, "itemId": 22649, "name": "血儿固" },
+    { "index": 8, "bookId": 22208, "itemId": 15301, "name": "鳍姬" },
+    { "index": 9, "bookId": 27783, "itemId": 13047, "name": "一目将" },
+    { "index": 10, "bookId": 3946, "itemId": 336, "name": "百秽" },
+    { "index": 11, "bookId": 5597, "itemId": 14467, "name": "怒伐天" },
+    { "index": 12, "bookId": 21297, "itemId": 24444, "name": "鵺兽" },
+    { "index": 13, "bookId": 19741, "itemId": 10971, "name": "大唾拉" },
+    { "index": 14, "bookId": 29586, "itemId": 21211, "name": "大鵺" },
+    { "index": 15, "bookId": 32620, "itemId": 25805, "name": "罗掌愿" },
+    { "index": 16, "bookId": 31431, "itemId": 3833, "name": "佐佐木岩流" },
+    { "index": 17, "bookId": 16834, "itemId": 31352, "name": "弁庆" },
+    { "index": 18, "bookId": 28649, "itemId": 9253, "name": "酒吞童子" },
+    { "index": 19, "bookId": 8553, "itemId": 2212, "name": "道狂" },
+    { "index": 20, "bookId": 15401, "itemId": 11076, "name": "畏风" },
+    { "index": 21, "bookId": 24526, "itemId": 14445, "name": "抚雷" },
+    { "index": 22, "bookId": 1590, "itemId": 21723, "name": "源义经" }
+  ],
+  "komainuMaps": [
+    { "index": 0, "name": "清水寺", "count": 3 },
+    { "index": 1, "name": "二条城", "count": 3 },
+    { "index": 2, "name": "大江山", "count": 6 },
+    { "index": 3, "name": "岚山", "count": 3 },
+    { "index": 4, "name": "遮那王城", "count": 0 },
+    { "index": 5, "name": "洛东", "count": 21 }
+  ],
+  "notes": {
+    "oniWeapons": "按获得顺序解锁。训练通知数管前 4 把；闪空、止水看训练清关标记，当前装备也能补上。",
+    "lanterns": "5 种，各 3 级。物品栏从左到右：特制、再生、攻势、攻守、觉醒。升级会换成这一级的 ID。开局那只 MEDICINE_BAG00 算特制 1 级。",
+    "amulets": "基础 15 个，预购/豪华会多 1 个，各 3 级，默认 1 级。未拿到的也列出来。名称按获得顺序暂编，还没有对照。",
+    "mysteries": "幻魔杂记共 23 册，对应 EmBook 敌人图鉴。是否收集看物品栏里的杂记道具，不是按图鉴顺序连续解锁。",
+    "komainu": "救助狛犬共 36 只，按 6 张地图 3、3、6、3、0、21 排列。存档位在 _MysteryParam.field_6858d6b7。",
+    "bosses": "故事 Boss 看 Steam 成就 2–14、19，全账号共用，不是每个栏位一份。再战另有 12 场训练。",
+    "achievements": "Steam 成就存在系统存档 _SystemSaveData._Achievement，EnumId 1–52。栏位里的同名数组是空壳。"
+  }
+}

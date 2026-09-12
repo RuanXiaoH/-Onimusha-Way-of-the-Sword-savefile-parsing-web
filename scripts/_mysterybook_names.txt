@@ -1,0 +1,28 @@
+MysteryBook_BtnAssign_000	打开神域一览	神域一覧を開く	Key Sanctuaries
+MysteryBook_BtnAssign_001	放大图片	画像を拡大	Enlarge Image
+MysteryBook_BtnAssign_002	滚动	スクロール	Scroll
+MysteryBook_BtnAssign_003	隐藏界面	UI非表示	Show/Hide UI
+MysteryBook_BtnAssign_004	缩小	縮小	Zoom Out
+MysteryBook_BtnAssign_005	放大	拡大	Zoom In
+MysteryBook_Spot00	清水寺	清水寺	Kiyomizu-dera Temple
+MysteryBook_Spot01	二条城	二条城	Nijo-jo Castle
+MysteryBook_Spot02	大江山	大江山	Mount Oe
+MysteryBook_Spot03	岚山	嵐山	Arashiyama
+MysteryBook_Spot04	遮那王城	遮那王城	Shanaoh Castle
+MysteryBook_Spot05	洛东	洛東	Eastern Kyoto
+MysteryBook_000_00	解说	解説	Observations
+MysteryBook_000_01	奇闻轶事	つたえばなし	Legends
+MysteryBook_000_02	已救助的狛犬数量	手助けした狛犬の数	Lion Dogs Rescued
+MysteryBook_000_03	<COLOR FF0000>#Rejected#</COLOR> MysteryBook_000_03	<COLOR FF0000>#Rejected#</COLOR> MysteryBook_000_03	<COLOR FF0000>#Rejected#</COLOR> MysteryBook_000_03
+MysteryBook_001_00	奇闻轶事	つたえばなし	Legend
+MysteryBook_001_01	风闻片语	語り草	Excerpts
+MysteryBook_001_02	后记	後書き	Commentary
+MysteryBook_001_03	报酬内容	報酬の詳細	Check Rewards
+MysteryBook_002_00	报酬内容	報酬の詳細	Rewards
+MysteryBook_002_01	已救助的狛犬数量	手助けした狛犬の数	Lion Dogs Rescued
+MysteryBook_002_02	{0}只	{0}匹	{0}
+MysteryBook_002_03	刀装	刀装	Sword Appearance
+MysteryBook_002_04	狛犬数量	狛犬の数	Lion Dogs
+MysteryBook_002_05	？？？？	？？？？	???
+MysteryBook_Help_00	阅览流传于各地的奇谭	各地にまつわる奇譚を閲覧できます	Explore legends and mysteries surrounding Kyoto's most iconic landmarks.
+MysteryBook_Help_01	请选择要阅览的奇谭	閲覧する奇譚を選択してください	Choose a mystery to explore further.
