@@ -30,7 +30,30 @@ body {
   position: relative;
   max-width: 1080px;
   margin: 0 auto;
-  padding: 48px 24px 80px;
+  padding: 5px 48px 5px;
+}
+
+.page-title {
+  font-size: 2em;
+}
+
+.brand-name {
+  display: block;
+  height: 80px;
+  width: auto;
+  max-width: min(320px, 100%);
+  object-fit: contain;
+  object-position: left center;
+  margin: 0 0 8px;
+}
+
+.page-sheet {
+  position: relative;
+  z-index: 1;
+  padding: 28px 28px 36px;
+  background: rgba(12, 9, 8, 0.58);
+  border: 1px solid var(--gold-dim);
+  backdrop-filter: blur(8px);
 }
 
 .mist {
@@ -41,7 +64,21 @@ body {
     radial-gradient(circle at 12% -10%, rgba(180, 35, 24, 0.28), transparent 36%),
     radial-gradient(circle at 90% 8%, rgba(215, 176, 106, 0.12), transparent 30%),
     linear-gradient(180deg, #160f0c, #0c0908 45%, #120d0b);
+  background-size: cover;
+  background-position: center;
   z-index: -1;
+}
+
+.upload-page .mist {
+  background:
+    linear-gradient(180deg, rgba(12, 9, 8, 0.42), rgba(12, 9, 8, 0.68)),
+    url("/image/bgc_1.webp") center / cover no-repeat;
+}
+
+.viewer-page .mist {
+  background:
+    linear-gradient(180deg, rgba(12, 9, 8, 0.48), rgba(12, 9, 8, 0.74)),
+    url("/image/bgc_2.webp") center / cover no-repeat;
 }
 
 .hero {
@@ -119,7 +156,8 @@ body {
   cursor: wait;
 }
 
-.upload-page {
+.upload-page,
+.viewer-page {
   min-height: 100vh;
 }
 

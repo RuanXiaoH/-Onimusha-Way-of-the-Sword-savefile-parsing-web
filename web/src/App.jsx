@@ -147,6 +147,10 @@ function normalizeSteamId(value) {
   return String(value || "").replace(/\s+/g, "").trim();
 }
 
+function BrandMark() {
+  return <img className="brand-name" src="/image/name.webp" alt="鬼武者：剑之道" />;
+}
+
 function SteamIdField({ id, value, onChange, disabled }) {
   return (
     <label className="steam-field" htmlFor={id}>
@@ -199,10 +203,10 @@ function UploadGate({ onFile, busy, error, dragging, setDragging, steamId, onSte
   return (
     <div className="page upload-page">
       <div className="mist" />
+      <div className="page-sheet">
       <header className="hero">
-        <p className="kicker">鬼武者 · 剑之道</p>
-        <p className="kicker">Onimusha · Way of the Sword</p>
-        <h1>存档阅览</h1>
+      <BrandMark />
+        <h1 className="page-title">存档阅览</h1>
         <p className="hero-note">仅支持Steam存档，解密需要.bin后缀存档和SteamID</p>
         <p className="hero-note">存档和SteamID只存在于浏览器本地存储，不会被上传到服务器</p>
       </header>
@@ -246,6 +250,7 @@ function UploadGate({ onFile, busy, error, dragging, setDragging, steamId, onSte
       <p>C:\Users\你的用户名\steam\userdata\一串数字\2638890\remote\win64_save</p>
       <p>存档文件一般是 data001Slot.bin</p>
       {error ? <p className="upload-error">{error}</p> : null}
+      </div>
       {busy ? (
         <div className="busy-mask">
           <p>正在解密并解析存档…</p>
@@ -333,7 +338,10 @@ export default function App() {
     return (
       <div className="page upload-page">
         <div className="mist" />
-        <p className="hero-note">正在读取本地记录…</p>
+        <div className="page-sheet">
+          <BrandMark />
+          <p className="hero-note">正在读取本地记录…</p>
+        </div>
       </div>
     );
   }
@@ -419,14 +427,14 @@ function SaveViewer({ saveFile, filename, uploadedAt, onFile, busy, error, steam
   }, [save.isAutosave, save.slotIndex]);
 
   return (
-    <div className="page">
+    <div className="page viewer-page">
       <div className="mist" />
+      <div className="page-sheet">
       <header className="hero">
-        <p className="kicker">鬼武者 · 剑之道</p>
-        <p className="kicker">Onimusha · Way of the Sword</p>
+      <BrandMark />
         <div className="hero-row">
           <div>
-            <h1>存档阅览</h1>
+            <h1 className="page-title">存档阅览</h1>
             <p className="slot">
               {slotLabel}
               {save.location ? ` · ${save.location}` : ""}
@@ -719,6 +727,7 @@ function SaveViewer({ saveFile, filename, uploadedAt, onFile, busy, error, steam
       <footer>
         解析只在本机进行，最后一次提交的结果会记在这个浏览器里，不会传到网上
       </footer>
+      </div>
       {busy ? (
         <div className="busy-mask">
           <p>正在解密并解析存档…</p>
